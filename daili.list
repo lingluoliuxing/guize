@@ -6,3 +6,4 @@ payload:
   - DOMAIN-SUFFIX,android.crashsight.wetest.net
   - DOMAIN-SUFFIX,jp-lobby.nikke-kr.com
   - DOMAIN-SUFFIX,www.qichiyu.com
+  - DOMAIN-SUFFIX,v2rayssr.com
