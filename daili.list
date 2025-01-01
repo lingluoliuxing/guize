@@ -10,3 +10,4 @@ payload:
   - DOMAIN-SUFFIX,app-api.pixiv.net
   - DOMAIN-SUFFIX,app- api.pixiv.net
   - DOMAIN-SUFFIX,mozilla.cloudflare-dns.com
+  - DOMAIN-SUFFIX,developer.mozilla.org
