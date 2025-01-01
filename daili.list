@@ -11,3 +11,4 @@ payload:
   - DOMAIN-SUFFIX,app- api.pixiv.net
   - DOMAIN-SUFFIX,mozilla.cloudflare-dns.com
   - DOMAIN-SUFFIX,developer.mozilla.org
+  - DOMAIN-SUFFIX,aps.amap.com
