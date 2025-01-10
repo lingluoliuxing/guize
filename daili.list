@@ -12,3 +12,4 @@ payload:
   - DOMAIN-SUFFIX,mozilla.cloudflare-dns.com
   - DOMAIN-SUFFIX,developer.mozilla.org
   - DOMAIN-SUFFIX,aps.amap.com
+  - DOMAIN-SUFFIX,bbs.south-plus.org
