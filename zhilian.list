@@ -1,2 +1,3 @@
 payload:
   - DOMAIN-SUFFIX,v16m-default.akamaized.net
+  - DOMAIN-SUFFIX,m.agedm.org
