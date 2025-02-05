@@ -16,3 +16,4 @@ payload:
   - DOMAIN-SUFFIX,mitm.it
   - DOMAIN-SUFFIX,artstation.com
   - IP-CIDR,1.1.1.1/32
+  - DOMAIN-SUFFIX,pixiv.net
