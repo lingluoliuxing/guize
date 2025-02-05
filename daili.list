@@ -15,3 +15,4 @@ payload:
   - DOMAIN-SUFFIX,i.pximg.net
   - DOMAIN-SUFFIX,mitm.it
   - DOMAIN-SUFFIX,artstation.com
+  - IP-SUFFIX,1.1.1.1:443
