@@ -7,8 +7,7 @@ payload:
   - DOMAIN-SUFFIX,jp-lobby.nikke-kr.com
   - DOMAIN-SUFFIX,www.qichiyu.com
   - DOMAIN-SUFFIX,v2rayssr.com
-  - DOMAIN-SUFFIX,app-api.pixiv.net
-  - DOMAIN-SUFFIX,app- api.pixiv.net
+  - DOMAIN-SUFFIX, app-api.pixiv.net:443
   - DOMAIN-SUFFIX,mozilla.cloudflare-dns.com
   - DOMAIN-SUFFIX,developer.mozilla.org
   - DOMAIN-SUFFIX,aps.amap.com
