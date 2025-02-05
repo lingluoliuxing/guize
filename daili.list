@@ -18,3 +18,4 @@ payload:
   - IP-CIDR,1.1.1.1/32
   - DOMAIN-SUFFIX,pixiv.net
   - DOMAIN-SUFFIX,raw.githubusercontent.com
+  - DOMAIN-SUFFIX,kv-h.phncdn.com
