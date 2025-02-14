@@ -24,3 +24,4 @@ payload:
   - DOMAIN-SUFFIX,rule34video.com
   - DOMAIN-SUFFIX,rule34gen.com
   - DOMAIN-SUFFIX,em-h.phncdn.com
+  - DOMAIN-SUFFIX,ei.phncdn.com
