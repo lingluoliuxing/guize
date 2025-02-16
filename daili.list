@@ -25,3 +25,4 @@ payload:
   - DOMAIN-SUFFIX,rule34gen.com
   - DOMAIN-SUFFIX,em-h.phncdn.com
   - DOMAIN-SUFFIX,ei.phncdn.com
+  - DOMAIN-SUFFIX,us-cdn07-prem.boomio-cdn.com
