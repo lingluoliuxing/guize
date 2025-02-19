@@ -7,3 +7,4 @@ payload:
   - DOMAIN-SUFFIX,rule34video.com
   - DOMAIN-SUFFIX,rule34gen.com
   - DOMAIN-SUFFIX,app-api.pixiv.net
+  - DOMAIN-SUFFIX,i.pximg.net
