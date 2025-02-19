@@ -6,3 +6,4 @@ payload:
   - DOMAIN-SUFFIX,raw.githubusercontent.com
   - DOMAIN-SUFFIX,rule34video.com
   - DOMAIN-SUFFIX,rule34gen.com
+  - DOMAIN-SUFFIX,app-api.pixiv.net
