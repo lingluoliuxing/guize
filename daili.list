@@ -9,3 +9,4 @@ payload:
   - DOMAIN-SUFFIX,app-api.pixiv.net
   - DOMAIN-SUFFIX,i.pximg.net
   - DOMAIN-SUFFIX,dzmm.ai
+  - DOMAIN-SUFFIX,ykkplay.emby.moe
