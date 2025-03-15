@@ -3,7 +3,6 @@ payload:
   - DOMAIN-SUFFIX,www.qichiyu.com
   - DOMAIN-SUFFIX,bbs.south-plus.org
   - DOMAIN-SUFFIX,pixiv.net
-  - DOMAIN-SUFFIX,raw.githubusercontent.com
   - DOMAIN-SUFFIX,rule34video.com
   - DOMAIN-SUFFIX,rule34gen.com
   - DOMAIN-SUFFIX,app-api.pixiv.net
