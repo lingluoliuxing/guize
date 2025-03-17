@@ -1,5 +1,4 @@
 payload:
-  - DOMAIN,hanime1.me
   - DOMAIN-SUFFIX,www.qichiyu.com
   - DOMAIN-SUFFIX,bbs.south-plus.org
   - DOMAIN-SUFFIX,pixiv.net
@@ -15,4 +14,4 @@ payload:
   - DOMAIN-SUFFIX,exhentai.org
   - DOMAIN-SUFFIX,vdownload.hembed.com
   - DOMAIN-SUFFIX,south-plus.net
-  - DOMAIN,raw.githubusercontent.com
+  - DOMAIN-SUFFIX,hanime1.me
