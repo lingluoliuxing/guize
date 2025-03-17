@@ -23,6 +23,20 @@ payload:
   - DOMAIN-SUFFIX,us-cdn04-prem.boomio-cdn.com
   - DOMAIN-SUFFIX,us-cdn05-prem.boomio-cdn.com
   - DOMAIN-SUFFIX,us-cdn06-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn07-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn08-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn09-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn010-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn011-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn012-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn013-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn014-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn015-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn016-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn017-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn018-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn019-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn020-prem.boomio-cdn.com
   - DOMAIN-SUFFIX,rule34video.com
   - DOMAIN-SUFFIX,rule34gen.com
 # 网盘
