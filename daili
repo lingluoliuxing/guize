@@ -1,0 +1,17 @@
+payload:
+  - DOMAIN-SUFFIX,www.qichiyu.com
+  - DOMAIN-SUFFIX,bbs.south-plus.org
+  - DOMAIN-SUFFIX,pixiv.net
+  - DOMAIN-SUFFIX,rule34video.com
+  - DOMAIN-SUFFIX,rule34gen.com
+  - DOMAIN-SUFFIX,app-api.pixiv.net
+  - DOMAIN-SUFFIX,i.pximg.net
+  - DOMAIN-SUFFIX,dzmm.ai
+  - DOMAIN-SUFFIX,ykkplay.emby.moe
+  - DOMAIN-SUFFIX,mypikpak.com
+  - DOMAIN-SUFFIX,i.imgur.com
+  - DOMAIN-SUFFIX,img.kemono.su
+  - DOMAIN-SUFFIX,exhentai.org
+  - DOMAIN-SUFFIX,vdownload.hembed.com
+  - DOMAIN-SUFFIX,south-plus.net
+  - DOMAIN-SUFFIX,hanime1.me
