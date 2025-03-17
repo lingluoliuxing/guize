@@ -1,18 +1,33 @@
 payload:
-  - DOMAIN-SUFFIX,www.qichiyu.com
+# 南+
+  - DOMAIN-SUFFIX,south-plus.net
   - DOMAIN-SUFFIX,bbs.south-plus.org
+# pixiv
   - DOMAIN-SUFFIX,pixiv.net
-  - DOMAIN-SUFFIX,rule34video.com
-  - DOMAIN-SUFFIX,rule34gen.com
   - DOMAIN-SUFFIX,app-api.pixiv.net
   - DOMAIN-SUFFIX,i.pximg.net
+# ai
   - DOMAIN-SUFFIX,dzmm.ai
+# emby
   - DOMAIN-SUFFIX,ykkplay.emby.moe
-  - DOMAIN-SUFFIX,mypikpak.com
+# exhentai
+  - DOMAIN-SUFFIX,exhentai.org
+  - DOMAIN-SUFFIX,e-hentai.org
+# 里番
+  - DOMAIN-SUFFIX,vdownload.hembed.com
+  - DOMAIN-SUFFIX,hanime1.me
+# r34
+  - DOMAIN-SUFFIX,us-cdn01-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn02-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn03-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn04-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn05-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,us-cdn06-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,rule34video.com
+  - DOMAIN-SUFFIX,rule34gen.com
+# 网盘
+ - DOMAIN-SUFFIX,mypikpak.com
+# 功能
   - DOMAIN-SUFFIX,i.imgur.com
   - DOMAIN-SUFFIX,img.kemono.su
-  - DOMAIN-SUFFIX,exhentai.org
-  - DOMAIN-SUFFIX,vdownload.hembed.com
-  - DOMAIN-SUFFIX,south-plus.net
-  - DOMAIN-SUFFIX,hanime1.me
-  - DOMAIN-SUFFIX,us-cdn01-prem.boomio-cdn.com
+  - DOMAIN-SUFFIX,www.qichiyu.com
