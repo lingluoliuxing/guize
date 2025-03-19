@@ -48,7 +48,6 @@ payload:
   - DOMAIN-SUFFIX,www.qichiyu.com
   - DOMAIN-SUFFIX,wiki.metacubex.one
 #漫画
-  - DOMAIN-SUFFIX,api.mangacopy.com
   - DOMAIN-SUFFIX,copy-manga.com
   - DOMAIN-SUFFIX,mangacopy.com
   - DOMAIN-SUFFIX,mangafuna.xyz
