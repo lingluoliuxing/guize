@@ -46,3 +46,5 @@ payload:
   - DOMAIN-SUFFIX,img.kemono.su
   - DOMAIN-SUFFIX,www.qichiyu.com
   - DOMAIN-SUFFIX,wiki.metacubex.one
+#漫画
+  - DOMAIN-SUFFIX,api.mangacopy.com
