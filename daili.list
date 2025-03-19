@@ -16,6 +16,7 @@ payload:
 # 里番
   - DOMAIN-SUFFIX,vdownload.hembed.com
   - DOMAIN-SUFFIX,hanime1.me
+  - DOMAIN-SUFFIX,rule34.xxx
 # r34
   - DOMAIN-SUFFIX,us-cdn01-prem.boomio-cdn.com
   - DOMAIN-SUFFIX,us-cdn02-prem.boomio-cdn.com
