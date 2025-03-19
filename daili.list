@@ -48,3 +48,4 @@ payload:
   - DOMAIN-SUFFIX,wiki.metacubex.one
 #漫画
   - DOMAIN-SUFFIX,api.mangacopy.com
+  - DOMAIN-SUFFIX,www.copy-manga.com
