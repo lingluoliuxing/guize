@@ -49,6 +49,7 @@ payload:
   - DOMAIN-SUFFIX,wiki.metacubex.one
   - DOMAIN-SUFFIX,greasyfork.org
 #漫画
+  - DOMAIN-SUFFIX,mangabz.com
 #18+
   - DOMAIN-SUFFIX,netflav5.com
   - DOMAIN-SUFFIX,jable.tv
