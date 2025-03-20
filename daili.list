@@ -47,6 +47,7 @@ payload:
   - DOMAIN-SUFFIX,img.kemono.su
   - DOMAIN-SUFFIX,www.qichiyu.com
   - DOMAIN-SUFFIX,wiki.metacubex.one
+  - DOMAIN-SUFFIX,greasyfork.org
 #漫画
 #18+
   - DOMAIN-SUFFIX,netflav5.com
