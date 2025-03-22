@@ -57,7 +57,4 @@ payload:
   - DOMAIN-SUFFIX,jable.tv
   - DOMAIN-SUFFIX,sehuatang.org
   - DOMAIN-SUFFIX,javtiful.com
-#reddit
-  - DOMAIN-SUFFIX,reddit.com
-  - DOMAIN-SUFFIX,redd.it
-  - DOMAIN-SUFFIX,redditmedia.com
+
