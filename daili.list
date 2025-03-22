@@ -61,3 +61,5 @@ payload:
   - DOMAIN-SUFFIX,reddit.com
   - DOMAIN-SUFFIX,redd.it
   - DOMAIN-SUFFIX,redditmedia.com
+＃facebook
+  - DOMAIN-SUFFIX,fbcdn.net
