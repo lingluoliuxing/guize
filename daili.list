@@ -64,3 +64,4 @@ payload:
   - DOMAIN-SUFFIX,redditspace.com
   - DOMAIN-SUFFIX,redditstatic.com
   - DOMAIN-SUFFIX,reddit.com
+  - DOMAIN-SUFFIX,facebook.com
