@@ -57,6 +57,7 @@ payload:
   - DOMAIN-SUFFIX,jable.tv
   - DOMAIN-SUFFIX,sehuatang.org
   - DOMAIN-SUFFIX,javtiful.com
+  - DOMAIN-SUFFIX,phncdn.com
 #社交
   - DOMAIN-SUFFIX,adjust.com
   - DOMAIN-SUFFIX,branch.io
