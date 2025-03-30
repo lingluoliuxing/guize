@@ -66,3 +66,5 @@ payload:
   - DOMAIN-SUFFIX,redditstatic.com
   - DOMAIN-SUFFIX,reddit.com
   - DOMAIN-SUFFIX,facebook.com
+#游戏
+  - DOMAIN-SUFFIX,hacg.icu
