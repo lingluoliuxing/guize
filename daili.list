@@ -6,6 +6,7 @@ payload:
   - DOMAIN-SUFFIX,pixiv.net
   - DOMAIN-SUFFIX,app-api.pixiv.net
   - DOMAIN-SUFFIX,i.pximg.net
+  - DOMAIN-SUFFIX,fanbox.cc
 # ai
   - DOMAIN-SUFFIX,dzmm.ai
 # emby
