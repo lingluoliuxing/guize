@@ -51,6 +51,7 @@ payload:
   - DOMAIN-SUFFIX,www.qichiyu.com
   - DOMAIN-SUFFIX,wiki.metacubex.one
   - DOMAIN-SUFFIX,greasyfork.org
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 #漫画
   - DOMAIN-SUFFIX,mangabz.com
 #18+
