@@ -11,6 +11,7 @@ payload:
   - DOMAIN-SUFFIX,dzmm.ai
 # emby
   - DOMAIN-SUFFIX,ykkplay.emby.moe
+  - DOMAIN-SUFFIX,ykk.emby.moe
 # exhentai
   - DOMAIN-SUFFIX,exhentai.org
   - DOMAIN-SUFFIX,e-hentai.org
