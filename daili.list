@@ -57,6 +57,8 @@ payload:
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
   - DOMAIN-SUFFIX,services.googleapis.cn
   - DOMAIN-SUFFIX,mikanani.me
+  - DOMAIN-SUFFIX,raw.githubusercontent.com
+  - DOMAIN-SUFFIX,cdn.jsdelivr.net
 #漫画
   - DOMAIN-SUFFIX,mangabz.com
 #18+
