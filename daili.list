@@ -46,6 +46,7 @@ payload:
   - DOMAIN-SUFFIX,rule34.xxx
 # 网盘
  - DOMAIN-SUFFIX,mypikpak.com
+ - DOMAIN-SUFFIX,mega.nz
 # 功能
   - DOMAIN-SUFFIX,i.imgur.com
   - DOMAIN-SUFFIX,img.kemono.su
