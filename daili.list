@@ -77,5 +77,6 @@ payload:
   - DOMAIN-SUFFIX,redditstatic.com
   - DOMAIN-SUFFIX,reddit.com
   - DOMAIN-SUFFIX,facebook.com
+  - DOMAIN-SUFFIX,chat.signal.org
 #游戏
   - DOMAIN-SUFFIX,hacg.icu
