@@ -20,6 +20,7 @@ payload:
   - DOMAIN-SUFFIX,hanime1.me
   - DOMAIN-SUFFIX,sacdnssedge.com
   - DOMAIN-SUFFIX,assets.strpst.com
+  - DOMAIN-SUFFIX,f95zone.to
 # r34
   - DOMAIN-SUFFIX,us-cdn01-prem.boomio-cdn.com
   - DOMAIN-SUFFIX,us-cdn02-prem.boomio-cdn.com
