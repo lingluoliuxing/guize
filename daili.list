@@ -49,6 +49,7 @@ payload:
  - DOMAIN-SUFFIX,mypikpak.com
  - DOMAIN-SUFFIX,mega.nz
  - DOMAIN-SUFFIX,mega.io
+ - DOMAIN-SUFFIX,api.mega.co.nz
 # 功能
   - DOMAIN-SUFFIX,i.imgur.com
   - DOMAIN-SUFFIX,img.kemono.su
