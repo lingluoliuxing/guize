@@ -85,3 +85,4 @@ payload:
   - DOMAIN-SUFFIX,chat.signal.org
 #游戏
   - DOMAIN-SUFFIX,hacg.icu
+  - DOMAIN-SUFFIX,blog.reimu.net
