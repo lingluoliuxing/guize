@@ -1,3 +1,4 @@
 payload:
   - DOMAIN-SUFFIX,v16m-default.akamaized.net
   - DOMAIN-SUFFIX,m.agedm.org
+  - DOMAIN-SUFFIX,zk-ga-pcprod.acs.pubg.com
