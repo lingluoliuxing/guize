@@ -84,6 +84,7 @@ payload:
   - DOMAIN-SUFFIX,facebook.com
   - DOMAIN-SUFFIX,chat.signal.org
   - DOMAIN-SUFFIX,preview.redd.it
+  - DOMAIN-SUFFIX,styles.redditmedia.com
 #游戏
   - DOMAIN-SUFFIX,hacg.icu
   - DOMAIN-SUFFIX,blog.reimu.net
