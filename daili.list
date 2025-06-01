@@ -87,6 +87,7 @@ payload:
   - DOMAIN-SUFFIX,styles.redditmedia.com
   - DOMAIN-SUFFIX,packaged-media.redd.it
   - DOMAIN-SUFFIX,external-preview.redd.it
+  - DOMAIN-SUFFIX,i.redd.it
 #游戏
   - DOMAIN-SUFFIX,hacg.icu
   - DOMAIN-SUFFIX,blog.reimu.net
