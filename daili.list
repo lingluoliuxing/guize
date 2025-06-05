@@ -64,6 +64,7 @@ payload:
   - DOMAIN-SUFFIX,raw.githubusercontent.com
   - DOMAIN-SUFFIX,cdn.jsdelivr.net
   - DOMAIN-SUFFIX,akile.io
+  - DOMAIN-SUFFIX,traffmonetizer.com
 #漫画
   - DOMAIN-SUFFIX,mangabz.com
   - DOMAIN-SUFFIX,wnacg.com
