@@ -76,6 +76,7 @@ payload:
   - DOMAIN-SUFFIX,sehuatang.org
   - DOMAIN-SUFFIX,javtiful.com
   - DOMAIN-SUFFIX,phncdn.com
+  - DOMAIN-SUFFIX,1.hacg.pics
 #社交
   - DOMAIN-SUFFIX,adjust.com
   - DOMAIN-SUFFIX,branch.io
