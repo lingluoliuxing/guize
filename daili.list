@@ -65,6 +65,7 @@ payload:
   - DOMAIN-SUFFIX,cdn.jsdelivr.net
   - DOMAIN-SUFFIX,akile.io
   - DOMAIN-SUFFIX,traffmonetizer.com
+  - DOMAIN-SUFFIX,nexusmods.com
 #漫画
   - DOMAIN-SUFFIX,mangabz.com
   - DOMAIN-SUFFIX,wnacg.com
