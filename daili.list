@@ -9,6 +9,8 @@ payload:
   - DOMAIN-SUFFIX,fanbox.cc
 # ai
   - DOMAIN-SUFFIX,dzmm.ai
+  - DOMAIN-SUFFIX,laopo.ai
+  - DOMAIN-SUFFIX,collect.gpt4novel.com
 # emby
   - DOMAIN-SUFFIX,ykkplay.emby.moe
   - DOMAIN-SUFFIX,ykk.emby.moe
