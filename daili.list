@@ -53,6 +53,7 @@ payload:
  - DOMAIN-SUFFIX,mega.nz
  - DOMAIN-SUFFIX,mega.io
  - DOMAIN-SUFFIX,api.mega.co.nz
+ - DOMAIN-SUFFIX,mega.co.nz
   - DOMAIN-SUFFIX,onedrive.live.com
 # 功能
   - DOMAIN-SUFFIX,i.imgur.com
