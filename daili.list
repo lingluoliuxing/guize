@@ -70,6 +70,7 @@ payload:
   - DOMAIN-SUFFIX,open.spotify.com
   - DOMAIN-SUFFIX,spotify.com
   - DOMAIN-SUFFIX,hub.docker.com
+  - DOMAIN-SUFFIX,hostingem.ru
 #漫画
   - DOMAIN-SUFFIX,mangabz.com
   - DOMAIN-SUFFIX,wnacg.com
