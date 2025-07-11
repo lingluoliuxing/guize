@@ -12,6 +12,7 @@ payload:
   - DOMAIN-SUFFIX,laopo.ai
   - DOMAIN-SUFFIX,collect.gpt4novel.com
   - DOMAIN-SUFFIX,rls.cheggpt.com
+  - DOMAIN-SUFFIX,xiangcao.ai
 # emby
   - DOMAIN-SUFFIX,ykkplay.emby.moe
   - DOMAIN-SUFFIX,ykk.emby.moe
