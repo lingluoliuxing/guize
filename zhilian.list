@@ -2,7 +2,3 @@ payload:
   - DOMAIN-SUFFIX,v16m-default.akamaized.net
   - DOMAIN-SUFFIX,m.agedm.org
   - DOMAIN-SUFFIX,bilibili.com
-#Google
-  - DOMAIN-SUFFIX,services.googleapis.cn
-  - DOMAIN-SUFFIX,googleapis.cn
-  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
