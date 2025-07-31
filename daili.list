@@ -104,3 +104,7 @@ payload:
   - DOMAIN-SUFFIX,blog.reimu.net
   - DOMAIN-SUFFIX,cloud.nikke-kr.com
   - DOMAIN-SUFFIX,jp-lobby.nikke-kr.com
+#Google
+  - DOMAIN-SUFFIX,services.googleapis.cn
+  - DOMAIN-SUFFIX,googleapis.cn
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
