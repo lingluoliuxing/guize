@@ -91,6 +91,7 @@ payload:
   - DOMAIN-SUFFIX,redditspace.com
   - DOMAIN-SUFFIX,redditstatic.com
   - DOMAIN-SUFFIX,reddit.com
+  - DOMAIN-SUFFIX,v.redd.it
   - DOMAIN-SUFFIX,facebook.com
   - DOMAIN-SUFFIX,chat.signal.org
   - DOMAIN-SUFFIX,preview.redd.it
@@ -104,3 +105,4 @@ payload:
   - DOMAIN-SUFFIX,blog.reimu.net
   - DOMAIN-SUFFIX,cloud.nikke-kr.com
   - DOMAIN-SUFFIX,jp-lobby.nikke-kr.com
+
