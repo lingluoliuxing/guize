@@ -1,4 +1,4 @@
 payload:
   - DOMAIN-SUFFIX,v16m-default.akamaized.net
   - DOMAIN-SUFFIX,m.agedm.org
-  - DOMAIN-SUFFIX,bilibili.com
+  - DOMAIN-SUFFIX,10.0.0.5:3001/2cXaAxRGfddmGz2yx1wA/download/collection/shellcrash?target=ClashMeta
