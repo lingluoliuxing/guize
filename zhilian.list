@@ -1,4 +1,4 @@
 payload:
   - DOMAIN-SUFFIX,v16m-default.akamaized.net
   - DOMAIN-SUFFIX,m.agedm.org
-  - IP-CIDR,10.0.0.5
+  - IP-CIDR,10.0.0.5/22
