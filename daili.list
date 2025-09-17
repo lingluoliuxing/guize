@@ -77,6 +77,7 @@ payload:
   - DOMAIN-SUFFIX,mangabz.com
   - DOMAIN-SUFFIX,wnacg.com
   - DOMAIN-SUFFIX,api.mangacopy.com
+  - DOMAIN-SUFFIX,18comic.vip
 #18+
   - DOMAIN-SUFFIX,netflav5.com
   - DOMAIN-SUFFIX,jable.tv
@@ -105,4 +106,5 @@ payload:
   - DOMAIN-SUFFIX,blog.reimu.net
   - DOMAIN-SUFFIX,cloud.nikke-kr.com
   - DOMAIN-SUFFIX,jp-lobby.nikke-kr.com
+
 
