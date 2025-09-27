@@ -106,5 +106,7 @@ payload:
   - DOMAIN-SUFFIX,blog.reimu.net
   - DOMAIN-SUFFIX,cloud.nikke-kr.com
   - DOMAIN-SUFFIX,jp-lobby.nikke-kr.com
+  - DOMAIN-SUFFIX,aws-na-dr.intlgame.com
+
 
 
