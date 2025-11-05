@@ -3,3 +3,6 @@ payload:
   - DOMAIN-SUFFIX,m.agedm.org
   - IP-CIDR,192.168.2.3/22
   - DOMAIN-SUFFIX,8.bf8bf.com
+  - DOMAIN-SUFFIX,images.nvidia.com
+  - DOMAIN-SUFFIX,ota.nvidia.com
+  - DOMAIN-SUFFIX,international-gfe.download.nvidia.com
