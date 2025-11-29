@@ -73,6 +73,7 @@ payload:
   - DOMAIN-SUFFIX,spotify.com
   - DOMAIN-SUFFIX,hub.docker.com
   - DOMAIN-SUFFIX,hostingem.ru
+  - DOMAIN-SUFFIX,2dfan.com
 #漫画
   - DOMAIN-SUFFIX,mangabz.com
   - DOMAIN-SUFFIX,wnacg.com
@@ -111,6 +112,7 @@ payload:
   - DOMAIN-SUFFIX,fuuf4y.register.appsflyersdk.com
   - DOMAIN-SUFFIX,aws-na.intlgame.com
   - DOMAIN-SUFFIX,graph.facebook.com
+
 
 
 
