@@ -6,3 +6,5 @@ payload:
   - DOMAIN-SUFFIX,images.nvidia.com
   - DOMAIN-SUFFIX,ota.nvidia.com
   - DOMAIN-SUFFIX,international-gfe.download.nvidia.com
+  - DOMAIN-SUFFIX,agedm.com
+  - DOMAIN-SUFFIX,agedm.io
