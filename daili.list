@@ -90,17 +90,7 @@ payload:
   - DOMAIN-SUFFIX,adjust.com
   - DOMAIN-SUFFIX,branch.io
   - DOMAIN-SUFFIX,fbcdn.net
-  - DOMAIN-SUFFIX,redditspace.com
-  - DOMAIN-SUFFIX,redditstatic.com
-  - DOMAIN-SUFFIX,reddit.com
-  - DOMAIN-SUFFIX,v.redd.it
-  - DOMAIN-SUFFIX,facebook.com
   - DOMAIN-SUFFIX,chat.signal.org
-  - DOMAIN-SUFFIX,preview.redd.it
-  - DOMAIN-SUFFIX,styles.redditmedia.com
-  - DOMAIN-SUFFIX,packaged-media.redd.it
-  - DOMAIN-SUFFIX,external-preview.redd.it
-  - DOMAIN-SUFFIX,i.redd.it
   - DOMAIN-SUFFIX,emoji.redditmedia.com
 #游戏
   - DOMAIN-SUFFIX,hacg.icu
@@ -113,6 +103,7 @@ payload:
   - DOMAIN-SUFFIX,aws-na.intlgame.com
   - DOMAIN-SUFFIX,graph.facebook.com
   - DOMAIN-SUFFIX,files.nexus-cdn.com
+
 
 
 
