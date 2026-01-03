@@ -8,12 +8,7 @@ payload:
   - DOMAIN-SUFFIX,collect.gpt4novel.com
   - DOMAIN-SUFFIX,rls.cheggpt.com
   - DOMAIN-SUFFIX,xiangcao.ai
-# Pixiv
-  - DOMAIN-SUFFIX,i.pximg.net
-  - DOMAIN-SUFFIX,s.pximg.net
-  - DOMAIN-SUFFIX,ats-wrapper.privacymanager.io
-  - DOMAIN-SUFFIX,pixon.ads-pixiv.net
-  - DOMAIN-SUFFIX,a.pixiv.org
+
 # emby
   - DOMAIN-SUFFIX,ykkplay.emby.moe
   - DOMAIN-SUFFIX,ykk.emby.moe
@@ -99,6 +94,7 @@ payload:
   - DOMAIN-SUFFIX,fuuf4y.register.appsflyersdk.com
   - DOMAIN-SUFFIX,aws-na.intlgame.com
   - DOMAIN-SUFFIX,files.nexus-cdn.com
+
 
 
 
