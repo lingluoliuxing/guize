@@ -96,6 +96,8 @@ payload:
   - DOMAIN-SUFFIX,userpic.redgifs.com
   - DOMAIN-SUFFIX,files.redgifs.com
   - DOMAIN-SUFFIX,qbrere.launches.appsflyersdk.com
+  - DOMAIN-SUFFIX,gsght.com
+  - DOMAIN-SUFFIX,impression.appsflyer.com
 #游戏
   - DOMAIN-SUFFIX,hacg.icu
   - DOMAIN-SUFFIX,blog.reimu.net
@@ -106,6 +108,7 @@ payload:
   - DOMAIN-SUFFIX,fuuf4y.register.appsflyersdk.com
   - DOMAIN-SUFFIX,aws-na.intlgame.com
   - DOMAIN-SUFFIX,files.nexus-cdn.com
+
 
 
 
