@@ -14,6 +14,7 @@ payload:
   - DOMAIN-SUFFIX,ats-wrapper.privacymanager.io
   - DOMAIN-SUFFIX,pixon.ads-pixiv.net
   - DOMAIN-SUFFIX,a.pixiv.org
+  - DOMAIN-SUFFIX,booth.pximg.net
 # emby
   - DOMAIN-SUFFIX,ykkplay.emby.moe
   - DOMAIN-SUFFIX,ykk.emby.moe
@@ -99,6 +100,7 @@ payload:
   - DOMAIN-SUFFIX,fuuf4y.register.appsflyersdk.com
   - DOMAIN-SUFFIX,aws-na.intlgame.com
   - DOMAIN-SUFFIX,files.nexus-cdn.com
+
 
 
 
