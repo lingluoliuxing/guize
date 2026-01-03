@@ -87,11 +87,7 @@ payload:
   - DOMAIN-SUFFIX,phncdn.com
   - DOMAIN-SUFFIX,1.hacg.pics
 #社交
-  - DOMAIN-SUFFIX,adjust.com
-  - DOMAIN-SUFFIX,branch.io
-  - DOMAIN-SUFFIX,fbcdn.net
-  - DOMAIN-SUFFIX,chat.signal.org
-  - DOMAIN-SUFFIX,emoji.redditmedia.com
+
 #游戏
   - DOMAIN-SUFFIX,hacg.icu
   - DOMAIN-SUFFIX,blog.reimu.net
@@ -103,6 +99,7 @@ payload:
   - DOMAIN-SUFFIX,aws-na.intlgame.com
   - DOMAIN-SUFFIX,graph.facebook.com
   - DOMAIN-SUFFIX,files.nexus-cdn.com
+
 
 
 
