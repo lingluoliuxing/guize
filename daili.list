@@ -2,11 +2,6 @@ payload:
 # 南+
   - DOMAIN-SUFFIX,south-plus.net
   - DOMAIN-SUFFIX,bbs.south-plus.org
-# pixiv
-  - DOMAIN-SUFFIX,pixiv.net
-  - DOMAIN-SUFFIX,app-api.pixiv.net
-  - DOMAIN-SUFFIX,i.pximg.net
-  - DOMAIN-SUFFIX,fanbox.cc
 # ai
   - DOMAIN-SUFFIX,dzmm.ai
   - DOMAIN-SUFFIX,laopo.ai
@@ -98,6 +93,7 @@ payload:
   - DOMAIN-SUFFIX,fuuf4y.register.appsflyersdk.com
   - DOMAIN-SUFFIX,aws-na.intlgame.com
   - DOMAIN-SUFFIX,files.nexus-cdn.com
+
 
 
 
