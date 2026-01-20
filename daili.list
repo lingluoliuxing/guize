@@ -64,8 +64,6 @@ payload:
   - DOMAIN-SUFFIX,akile.io
   - DOMAIN-SUFFIX,traffmonetizer.com
   - DOMAIN-SUFFIX,nexusmods.com
-  - DOMAIN-SUFFIX,open.spotify.com
-  - DOMAIN-SUFFIX,spotify.com
   - DOMAIN-SUFFIX,hub.docker.com
   - DOMAIN-SUFFIX,hostingem.ru
   - DOMAIN-SUFFIX,2dfan.com
@@ -101,6 +99,7 @@ payload:
   - DOMAIN-SUFFIX,fuuf4y.register.appsflyersdk.com
   - DOMAIN-SUFFIX,aws-na.intlgame.com
   - DOMAIN-SUFFIX,files.nexus-cdn.com
+
 
 
 
