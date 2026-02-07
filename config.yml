@@ -1,0 +1,788 @@
+mixed-port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+ipv6: false
+unified-delay: true
+tcp-concurrent: true
+external-controller: :9999
+external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+  mtu: 1300
+
+dns:
+  enable: true
+  listen: :53
+  ipv6: true # 建议与全局 ipv6 保持一致，设为 false 减少旁路由解析冲突
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.0/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "geosite:cn"              # 关键：所有国内域名不走 Fake-IP
+    - "geosite:apple"           # 苹果服务建议直连，走 Real-IP
+    - "geosite:microsoft@cn"    # 微软国内服务
+    - "+.stun.*"                # STUN 服务（网游/通话相关）
+    - "+.nba.com"
+    - "+.tmall.com"
+    - "+.taobao.com"
+  nameserver:
+    - 127.0.0.1:666 # 成功指向你的 MosDNS
+
+sniffer:
+  sniff:
+    TLS: { ports: [1-65535], override-destination: true }
+    HTTP: { ports: [1-65535], override-destination: true }
+  enable: true
+  skip-domain: ["Mijia Cloud", "dlg.io.mi.com"]
+  parse-pure-ip: true
+  force-dns-mapping: true
+  override-destination: true
+
+find-process-mode: always
+routing-mark: 7894
+geox-url:
+  geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"
+
+hosts:
+  "time.android.com": 203.107.6.88
+  "time.facebook.com": 203.107.6.88
+  "localhost": 127.0.0.1
+proxy-groups:
+  - {name: 📲 社交, type: fallback,proxies: [香港测速, 香港节点, 台湾测速, 台湾节点, 美国测速, 美国节点, 日本测速, 日本节点, 其他测速, 自用测速, 🎯 国内流量, 🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: 📢 谷歌服务, type: fallback,proxies: [香港测速, 香港节点, 台湾测速, 台湾节点, 美国测速, 美国节点, 日本测速, 日本节点, 其他测速, 自用测速, 🎯 国内流量, 🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: 🎥 国外媒体, type: fallback,proxies: [香港测速, 香港节点, 台湾测速, 台湾节点, 美国测速, 美国节点, 日本测速, 日本节点, 其他测速, 自用测速, 🎯 国内流量, 🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: 🎮 国外游戏, type: fallback,proxies: [香港测速, 香港节点, 台湾测速, 台湾节点, 美国测速, 美国节点, 日本测速, 日本节点, 其他测速, 自用测速, 🎯 国内流量, 🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: 🎥 18+, type: fallback,proxies: [香港测速, 香港节点, 台湾测速, 台湾节点, 美国测速, 美国节点, 日本测速, 日本节点, 其他测速, 自用测速, 🎯 国内流量, 🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: 🤖 人工智障,type: fallback,proxies: [香港测速, 香港节点, 台湾测速, 台湾节点, 美国测速, 美国节点, 日本测速, 日本节点, 其他测速, 自用测速, 🎯 国内流量, 🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: Ⓜ️ 微软服务(国际), type: fallback,proxies: [香港测速, 香港节点, 台湾测速, 台湾节点, 美国测速, 美国节点, 日本测速, 日本节点, 其他测速, 自用测速, 🎯 国内流量, 🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: 🍎 苹果服务(国际), type: fallback,proxies: [香港测速, 香港节点, 台湾测速, 台湾节点, 美国测速, 美国节点, 日本测速, 日本节点, 其他测速, 自用测速, 🎯 国内流量, 🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: 📲 电报,type: fallback,proxies: [香港测速, 香港节点, 台湾测速, 台湾节点, 美国测速, 美国节点, 日本测速, 日本节点, 其他测速, 自用测速, 🎯 国内流量, 🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: ☁️ Cloudflare , type: fallback,proxies: [香港测速, 香港节点, 台湾测速, 台湾节点, 美国测速, 美国节点, 日本测速, 日本节点, 其他测速, 自用测速, 🎯 国内流量, 🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: 🐳 Docker, type: fallback,proxies: [香港测速, 香港节点, 台湾测速, 台湾节点, 美国测速, 美国节点, 日本测速, 日本节点, 其他测速, 自用测速, 🎯 国内流量, 🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: 🕸️ Github,type: fallback,proxies: [香港测速, 香港节点, 台湾测速, 台湾节点, 美国测速, 美国节点, 日本测速, 日本节点, 其他测速, 自用测速, 🎯 国内流量, 🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: 🐟 漏网之鱼,type: select,proxies: [🎯 国内流量, 香港测速, 香港节点, 台湾测速, 台湾节点, 日本测速, 日本节点, 美国测速, 美国节点, 其他测速, 自用测速, 🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: 🍎 苹果服务(国区), type: select,proxies: [🎯 国内流量, 香港测速, 香港节点, 台湾测速, 台湾节点, 日本测速, 日本节点, 美国测速, 美国节点, 其他测速, 自用测速,🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: Ⓜ️ 微软服务(国区), type: select,proxies: [🎯 国内流量, 香港测速, 香港节点, 台湾测速, 台湾节点, 日本测速, 日本节点, 美国测速, 美国节点, 其他测速, 自用测速,🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: 🎮 国内游戏,type: select,proxies: [🎯 国内流量, 香港测速, 香港节点, 台湾测速, 台湾节点, 日本测速, 日本节点, 美国测速, 美国节点, 其他测速, 自用测速, 🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: 🎥 国内媒体,type: select,proxies: [🎯 国内流量, 香港测速, 香港节点, 台湾测速, 台湾节点, 日本测速, 日本节点, 美国测速, 美国节点, 其他测速, 自用测速, 🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: ⏱️ Speedtest测速,type: select,proxies: [🎯 国内流量, 香港测速, 香港节点, 台湾测速, 台湾节点, 日本测速, 日本节点, 美国测速, 美国节点, 其他测速, 自用测速,  🏡 自动选择, 🚀 手动切换,] ,}
+  - {name: 🚀 手动切换, type: select, proxies: [🎯 国内流量], use: [lingluoliuxing]}
+  - {
+    name: 🏡 自动选择,
+    type: url-test,
+    url: http://www.gstatic.com/generate_204,
+    interval: "300",
+    tolerance: 10,
+    lazy: true,
+    use: [lingluoliuxing],
+  }
+  - {
+      name: 香港节点,
+      type: select,
+      use: [lingluoliuxing],
+
+      filter: "(?i)港|hk|hongkong|hong kong",
+    }
+  - {
+      name: 香港测速,
+      type: url-test,
+      url: http://www.gstatic.com/generate_204,
+      interval: "300",
+      tolerance: 10,
+      lazy: true,
+      use: [lingluoliuxing],
+
+      filter: "(?i)港|hk|hongkong|hong kong",
+      exclude-filter: "2x|0.1x",
+    }
+  - {
+      name: 台湾节点,
+      type: select,
+      use: [lingluoliuxing],
+
+      filter: "(?i)台|tw|taiwan",
+    }
+  - {
+      name: 台湾测速,
+      type: url-test,
+      url: http://www.gstatic.com/generate_204,
+      interval: "300",
+      tolerance: 10,
+      lazy: true,
+      use: [lingluoliuxing],
+
+      filter: "(?i)台|tw|taiwan",
+      exclude-filter: "2x|0.1x|0.1",
+    }
+  - {
+      name: 日本节点,
+      type: select,
+      use: [lingluoliuxing],
+
+      filter: "(?i)日本|jp|japan",
+    }
+  - {
+      name: 日本测速,
+      type: url-test,
+      url: http://www.gstatic.com/generate_204,
+      interval: "300",
+      tolerance: 10,
+      lazy: true,
+      use: [lingluoliuxing],
+
+      filter: "(?i)日本|jp|japan",
+    }
+
+  - {
+      name: 美国节点,
+      type: select,
+      use: [lingluoliuxing],
+
+      filter: "(?i)美|us|unitedstates|united states",
+      exclude-filter: "US-VMess|US-TUIC|US-shadowsocks|US_trojan",
+    }
+  - {
+      name: 美国测速,
+      type: url-test,
+      url: http://www.gstatic.com/generate_204,
+      interval: "300",
+      tolerance: 10,
+      lazy: true,
+      use: [lingluoliuxing],
+
+      filter: "(?i)美|us|unitedstates|united states",
+      exclude-filter: "US-VMess|US-TUIC|US-shadowsocks|US_trojan|0.1",
+    }
+  - {
+      name: 其他测速,
+      type: url-test,
+      url: http://www.gstatic.com/generate_204,
+      interval: "300",
+      tolerance: 10,
+      lazy: true,
+      use: [lingluoliuxing],
+
+      exclude-filter: "港|hk|hongkong|hong kong|台|tw|taiwan|日本|jp|japan|美|us|unitedstates|united states|HongKong|Taiwan|Japan|UnitedStates|Singapore|US|HK|TW|JP|SG|US-VMess|US-shadowsocks|US_trojan|US-TUIC",
+    }
+  - {
+      name: 自用测速,
+      type: url-test,
+      url: http://www.gstatic.com/generate_204,
+      interval: "300",
+      tolerance: 10,
+      lazy: true,
+      use: [lingluoliuxing],
+      filter: "(?i)US-VMess|US-shadowsocks|US_trojan|US-TUIC",
+    }
+  - {name: 🎯 国内流量, type: select, proxies: [DIRECT]}
+proxy-providers:
+  lingluoliuxing:
+    type: http
+    url: "http://192.168.2.3:3001/2cXaAxRGfddmGz2yx1wA/download/collection/ShellCrash?target=ClashMeta"
+    path: "./providers/lingluoliuxing.yaml"
+    interval: 43200
+    health-check:
+      enable: true
+      lazy: true
+      url: "http://www.apple.com/library/test/success.html"
+      interval: 600
+    override:
+      udp: true
+      skip-cert-verify: true
+rules:
+  - IP-CIDR6,::/0,DIRECT
+
+  # 谷歌相关服务
+  - DOMAIN-KEYWORD,googleapis,📢 谷歌服务
+  - DOMAIN-KEYWORD,xn-ngstr-cn-8za9o.com,📢 谷歌服务
+  - DOMAIN-KEYWORD,xn-ngstr-Ira8j.com,📢 谷歌服务
+  - RULE-SET,YouTube,🎥 国外媒体
+  - RULE-SET,google,📢 谷歌服务
+
+  #自定义规则
+  - RULE-SET,daili,🎥 18+
+  - RULE-SET,zhilian,🎯 国内流量
+  - DOMAIN-SUFFIX,githubusercontent.com,🕸️ Github
+  - DOMAIN-KEYWORD,ytools,🎯 国内流量
+  - RULE-SET,privateip,🎯 国内流量
+
+  # 流媒体服务（按平台细分）
+  - RULE-SET,Bilibili,🎥 国内媒体
+  - RULE-SET,YouTubemusic,🎥 国外媒体
+  - RULE-SET,Netflix,🎥 国外媒体
+  - IP-ASN,396986,🎥 国外媒体
+  - RULE-SET,TVB,🎥 国外媒体
+  - RULE-SET,Niconico,🎥 国外媒体
+  - RULE-SET,BBC,🎥 国外媒体
+  - RULE-SET,HBOHK,🎥 国外媒体
+  - RULE-SET,HBOUSA,🎥 国外媒体
+  - RULE-SET,twitch,🎥 国外媒体
+  
+  # 人工智能服务
+  - RULE-SET,claude,🤖 人工智障
+  - RULE-SET,openai,🤖 人工智障
+  - RULE-SET,cursor,🤖 人工智障
+  - RULE-SET,gemini,🤖 人工智障
+  - RULE-SET,perplexity,🤖 人工智障
+  - RULE-SET,Ai,🤖 人工智障
+  - DOMAIN-KEYWORD,antigravity,🤖 人工智障
+ 
+  # 其他类软件
+  - RULE-SET,Zoom,📲 社交
+  - RULE-SET,Yandex,📲 社交
+  
+  # 其他国外流媒体
+  - RULE-SET,Disney,🎥 国外媒体
+  - RULE-SET,Bahamut,🎥 国外媒体
+  - RULE-SET,Hulu,🎥 国外媒体
+  - RULE-SET,PandoraTV,🎥 国外媒体
+  - RULE-SET,FOXNOW,🎥 国外媒体
+  - RULE-SET,FOXPlus,🎥 国外媒体
+  - RULE-SET,KKTV,🎥 国外媒体
+  - RULE-SET,NaverTV,🎥 国外媒体
+  - RULE-SET,NowE,🎥 国外媒体
+  - RULE-SET,ParamountPlus,🎥 国外媒体
+  - RULE-SET,PrimeVideo,🎥 国外媒体
+  - RULE-SET,TVer,🎥 国外媒体
+  - RULE-SET,myTVSUPER,🎥 国外媒体
+  - RULE-SET,HBOAsia,🎥 国外媒体
+  - RULE-SET,DiscoveryPlus,🎥 国外媒体
+  - RULE-SET,Overcast,🎥 国外媒体
+  - RULE-SET,Peacock,🎥 国外媒体
+  - RULE-SET,BritboxUK,🎥 国外媒体
+  - RULE-SET,HKOpenTV,🎥 国外媒体
+  - RULE-SET,Acplay,🎥 国外媒体
+
+  # WifiCalling
+  - RULE-SET,UK-wifi-call,📲 社交
+
+  # 速度测试相关
+  - RULE-SET,Speedtest7,⏱️ Speedtest测速
+  - RULE-SET,speedtest,⏱️ Speedtest测速
+
+
+  # 游戏相关
+  - DOMAIN-SUFFIX,images.steamusercontent.com,🎮 国外游戏
+  - RULE-SET,Tencent,🎮 国内游戏
+  - RULE-SET,steamCN,🎮 国内游戏
+  - RULE-SET,TencentGame@cn,🎮 国内游戏
+  - RULE-SET,Ubisoftcn,🎮 国内游戏
+  
+  # 测试分组游戏代理
+  - RULE-SET,steam,🎮 国外游戏
+  - RULE-SET,Epic,🎮 国外游戏
+  - RULE-SET,EA,🎮 国外游戏
+  - RULE-SET,Ubisoft,🎮 国外游戏
+
+
+  # 成人内容
+  - RULE-SET,Pixiv,🎥 18+
+  - DOMAIN-KEYWORD,porn,🎥 18+
+  - DOMAIN-KEYWORD,xvideos,🎥 18+
+  - DOMAIN-KEYWORD,kinky,🎥 18+
+  - DOMAIN-KEYWORD,sex,🎥 18+
+  - DOMAIN-KEYWORD,hentai,🎥 18+
+  - DOMAIN-KEYWORD,comic,🎥 18+
+
+  # 社交与通信
+  - RULE-SET,X,📲 社交
+  - RULE-SET,Instagram,📲 社交
+  - RULE-SET,Discord,📲 社交
+  - RULE-SET,telegramip,📲 电报
+  - RULE-SET,Whatsapp,📲 社交
+  - RULE-SET,Reddit,📲 社交
+  - RULE-SET,Facebook,📲 社交
+
+  # 特殊应用
+  - RULE-SET,docker,🐳 Docker
+  - RULE-SET,github,🕸️ Github
+
+  # 特殊服务
+  - DOMAIN-SUFFIX,1steam.one,🎥 国外媒体
+
+  # 科技公司服务
+  - RULE-SET,microsoft-cn,Ⓜ️ 微软服务(国区)
+  - RULE-SET,microsoft-global,Ⓜ️ 微软服务(国际)
+  - RULE-SET,apple-cn,🍎 苹果服务(国区)
+  - DOMAIN-SUFFIX,mask-api.icloud.com,🍎 苹果服务(国际)
+  - DOMAIN-SUFFIX,mask-h2.icloud.com,🍎 苹果服务(国际)
+  - DOMAIN-SUFFIX,apple-relay.cloudflare.com,🍎 苹果服务(国际)
+  - RULE-SET,apple-global,🍎 苹果服务(国际)
+  - DOMAIN-KEYWORD,apple,🍎 苹果服务(国际)
+  - DOMAIN-KEYWORD,icloud,🍎 苹果服务(国际)
+  - RULE-SET,cloudflare,☁️ Cloudflare
+
+  # 本地网络及直连规则
+  - RULE-SET,ChinaMAX,🎯 国内流量
+  - RULE-SET,Nvidia,🎯 国内流量
+  - RULE-SET,ChinaMAX_Domain,🎯 国内流量
+  - RULE-SET,ChinaMAX_IP,🎯 国内流量
+  - RULE-SET,cnip,🎯 国内流量
+
+  # 最终匹配规则
+  - MATCH,🐟 漏网之鱼
+
+rule-providers:
+  claude:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/7999264969a0318095fd6e27a182feec1de951b5/rule/Clash/Claude/Claude.yaml"
+    path: ./providers/ai.yaml
+    interval: 86400
+  cursor:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://github.com/MetaCubeX/meta-rules-dat/blob/803368e10b7d6694af40f79897a1b57ed2af31d5/geo/geosite/cursor.yaml"
+    path: ./providers/cursor.yaml
+    interval: 86400
+  gemini:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://github.com/MetaCubeX/meta-rules-dat/blob/803368e10b7d6694af40f79897a1b57ed2af31d5/geo/geosite/google-gemini.yaml"
+    path: ./providers/gemini.yaml
+    interval: 86400
+  microsoft-cn:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/microsoft%40cn.yaml"
+    path: ./providers/microsoft-cn.yaml
+    interval: 86400
+  microsoft-global:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/microsoft.yaml"
+    path: ./providers/microsoft-global.yaml
+    interval: 86400
+  apple-cn:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/apple-cn.yaml"
+    path: ./providers/apple-cn.yaml
+    interval: 86400
+  apple-global:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/apple.yaml"
+    path: ./providers/apple-global.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml"
+    path: ./providers/google.yaml
+    interval: 86400
+  telegramip:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
+    path: ./providers/telegramip.yaml
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml"
+    path: ./providers/Netflix.yaml
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/9557ce42ca5e529f86ae333ef1a321d63d23965a/rule/Clash/YouTube/YouTube.yaml"
+    path: ./providers/youtube.yaml
+    interval: 86400
+  YouTubemusic:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic.yaml"
+    path: ./providers/youtubemusic.yaml
+    interval: 86400
+  Discord:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.yaml"
+    path: ./providers/Discord.yaml
+    interval: 86400
+  Disney:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml"
+    path: ./providers/Disney.yaml
+    interval: 86400
+  steamCN:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://github.com/MetaCubeX/meta-rules-dat/blob/5ef8c0a440b1a708f1fa89fe687ac4821c992cda/geo/geosite/steam%40cn.yaml"
+    path: ./providers/steamcn.yaml
+    interval: 86400
+  steam:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://github.com/MetaCubeX/meta-rules-dat/blob/5ef8c0a440b1a708f1fa89fe687ac4821c992cda/geo/geosite/steam.yaml"
+    path: ./providers/steam.yaml
+    interval: 86400
+  Ubisoft:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://github.com/MetaCubeX/meta-rules-dat/blob/5ef8c0a440b1a708f1fa89fe687ac4821c992cda/geo/geosite/ubisoft.yaml"
+    path: ./providers/Ubisoft.yaml
+    interval: 86400
+  Ubisoftcn:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://github.com/MetaCubeX/meta-rules-dat/blob/5ef8c0a440b1a708f1fa89fe687ac4821c992cda/geo/geosite/ubisoft%40cn.yaml"
+    path: ./providers/Ubisoftcn.yaml
+    interval: 86400
+  EA:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/e628d6909cebd6ea95257745440d43493e03495f/rule/Clash/EA/EA.yaml"
+    path: ./ruleset/EA.yaml
+    interval: 86400
+  Epic:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://github.com/MetaCubeX/meta-rules-dat/blob/5ef8c0a440b1a708f1fa89fe687ac4821c992cda/geo/geosite/epicgames.yaml"
+    path: ./ruleset/EPIC.yaml
+    interval: 86400
+  Instagram:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml"
+    path: ./providers/Ins.yaml
+    interval: 86400
+  X:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml"
+    path: ./providers/X.yaml
+    interval: 86400
+  Niconico:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Niconico/Niconico.yaml"
+    path: ./ruleset/Niconico.yaml
+    interval: 86400
+  BBC:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BBC/BBC.yaml"
+    path: ./ruleset/BBC.yaml
+    interval: 86400
+  Bahamut:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut.yaml"
+    path: ./ruleset/Bahamut.yaml
+    interval: 86400
+  Hulu:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hulu/Hulu.yaml"
+    path: ./ruleset/Hulu.yaml
+    interval: 86400
+  PandoraTV:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PandoraTV/PandoraTV.yaml"
+    path: ./ruleset/PandoraTV.yaml
+    interval: 86400
+  TVB:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TVB/TVB.yaml"
+    path: ./ruleset/TVB.yaml
+    interval: 86400
+  HBOHK:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBOHK/HBOHK.yaml"
+    path: ./ruleset/HBOHK.yaml
+    interval: 86400
+  HBOUSA:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBOUSA/HBOUSA.yaml"
+    path: ./ruleset/HBOUSA.yaml
+    interval: 86400
+  FOXNOW:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/FOXNOW/FOXNOW.yaml"
+    path: ./ruleset/FOXNOW.yaml
+    interval: 86400
+  FOXPlus:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/FOXPlus/FOXPlus.yaml"
+    path: ./ruleset/FOXPlus.yaml
+    interval: 86400
+  KKTV:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/KKTV/KKTV.yaml"
+    path: ./ruleset/KKTV.yaml
+    interval: 86400
+  NaverTV:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NaverTV/NaverTV.yaml"
+    path: ./ruleset/NaverTV.yaml
+    interval: 86400
+  NowE:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NowE/NowE.yaml"
+    path: ./ruleset/NowE.yaml
+    interval: 86400
+  ParamountPlus:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ParamountPlus/ParamountPlus.yaml"
+    path: ./ruleset/ParamountPlus.yaml
+    interval: 86400
+  PrimeVideo:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PrimeVideo/PrimeVideo.yaml"
+    path: ./ruleset/PrimeVideo.yaml
+    interval: 86400
+  TVer:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TVer/TVer.yaml"
+    path: ./ruleset/TVer.yaml
+    interval: 86400
+  myTVSUPER:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/myTVSUPER/myTVSUPER.yaml"
+    path: ./ruleset/myTVSUPER.yaml
+    interval: 86400
+  HBOAsia:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBOAsia/HBOAsia.yaml"
+    path: ./ruleset/HBOAsia.yaml
+    interval: 86400
+  DiscoveryPlus:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DiscoveryPlus/DiscoveryPlus.yaml"
+    path: ./ruleset/DiscoveryPlus.yaml
+    interval: 86400
+  Overcast:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Overcast/Overcast.yaml"
+    path: ./ruleset/Overcast.yaml
+    interval: 86400
+  Peacock:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Peacock/Peacock.yaml"
+    path: ./ruleset/Peacock.yaml
+    interval: 86400
+  BritboxUK:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/9557ce42ca5e529f86ae333ef1a321d63d23965a/rule/Clash/BritboxUK/BritboxUK.yaml"
+    path: ./ruleset/BritboxUK.yaml
+    interval: 86400
+  HKOpenTV:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HKOpenTV/HKOpenTV.yaml"
+    path: ./ruleset/HKOpenTV.yaml
+    interval: 86400
+  Acplay:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/41d59ed0629ffb7aabc99cdcaafc1505b9a25991/rule/Clash/Acplay/Acplay.yaml"
+    path: ./ruleset/Acplay.yaml
+    interval: 86400
+  Tencentvideo:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/41d59ed0629ffb7aabc99cdcaafc1505b9a25991/rule/Clash/TencentVideo/TencentVideo.yaml"
+    path: ./ruleset/tencentvideo.yaml
+    interval: 86400
+  Tencent:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/41d59ed0629ffb7aabc99cdcaafc1505b9a25991/rule/Clash/Tencent/Tencent.yaml"
+    path: ./ruleset/Tencent.yaml
+    interval: 86400
+  ChinaMAX:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/41d59ed0629ffb7aabc99cdcaafc1505b9a25991/rule/Clash/ChinaMax/ChinaMax.yaml"
+    path: ./ruleset/ChinaMax.yaml
+    interval: 86400
+  ChinaMAX_Domain:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/41d59ed0629ffb7aabc99cdcaafc1505b9a25991/rule/Clash/ChinaMax/ChinaMax_Domain.yaml"
+    path: ./ruleset/ChinaMax_Domain.yaml
+    interval: 86400
+  ChinaMAX_IP:
+    type: http
+    behavior: ipcidr
+    url: "https://ghproxy.05160715.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/41d59ed0629ffb7aabc99cdcaafc1505b9a25991/rule/Clash/ChinaMax/ChinaMax_IP.yaml"
+    path: ./ruleset/ChinaMax_IP.yaml
+    interval: 86400
+  docker:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/41d59ed0629ffb7aabc99cdcaafc1505b9a25991/rule/Clash/Docker/Docker.yaml"
+    path: ./ruleset/Docker.yaml
+    interval: 86400
+  github:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/41d59ed0629ffb7aabc99cdcaafc1505b9a25991/rule/Clash/GitHub/GitHub.yaml"
+    path: ./ruleset/github.yaml
+    interval: 86400
+  Whatsapp:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/e628d6909cebd6ea95257745440d43493e03495f/rule/Clash/Whatsapp/Whatsapp.yaml"
+    path: ./ruleset/whatsapp.yaml
+    interval: 86400
+  TencentGame@cn:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/8ccfafe264fdd0a16021c9aa342a0cc8f30f28d8/geo/geosite/tencent-games%40cn.yaml"
+    path: ./ruleset/tencentgamecn.yaml
+    interval: 86400
+  Speedtest7:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/41d59ed0629ffb7aabc99cdcaafc1505b9a25991/rule/Clash/Speedtest/Speedtest.yaml"
+    path: ./ruleset/Speedtest7.yaml
+    interval: 86400
+  speedtest:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://github.com/MetaCubeX/meta-rules-dat/blob/84ca448190a059fc921a90ede27af88c1904fbe2/geo/geosite/speedtest.yaml"
+    path: ./ruleset/speedtest1.yaml
+    interval: 86400
+  twitch:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/9b728577fb9e07454a03d0ec9e7374af23191c17/rule/Clash/Twitch/Twitch.yaml"
+    path: ./ruleset/twitch.yaml
+    interval: 86400
+  openai:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://github.com/blackmatrix7/ios_rule_script/blob/41d59ed0629ffb7aabc99cdcaafc1505b9a25991/rule/Clash/OpenAI/OpenAI.yaml"
+    path: ./ruleset/steamdownload.yaml
+    interval: 86400
+  cn:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./ruleset/cn.mrs
+    url: "https://ghproxy.05160715.xyz/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.mrs"
+    interval: 86400
+  privateip:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    path: ./ruleset/privateip.mrs
+    url: "https://ghproxy.05160715.xyz/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/privateip.mrs"
+    interval: 86400
+  cnip:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    path: ./ruleset/cnip.mrs
+    url: "https://ghproxy.05160715.xyz/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cnip.mrs"
+    interval: 86400
+  cloudflare:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Cloudflare/Cloudflare.yaml"
+    path: ./ruleset/cf.yaml
+    interval: 86400
+  Zoom:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/zoom.yaml"
+    path: ./ruleset/zoom.yaml
+    interval: 86400
+  Bilibili:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://github.com/MetaCubeX/meta-rules-dat/blob/82929607bd6d0545bfa430deebfa701c426b62fc/geo/geosite/bilibili.yaml"
+    path: ./ruleset/bilibili.yaml
+    interval: 86400
+  perplexity:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.05160715.xyz/https://github.com/MetaCubeX/meta-rules-dat/blob/4a598c2e93774116158f4f815bdb6f8c1f6bb9fc/geo/geosite/perplexity.yaml"
+    path: ./ruleset/perplexity.yaml
+    interval: 86400
+  Ai:
+    type: http
+    behavior: classical
+    url: "https://sub.kkndxx.top/uvECCepFx8KDECpMFeTuyA5Y70Xmfa0RWgoLfK2cPTH1jsAHEUBvJB6a4GHKXh5ijDX78EyFDod8ksFdafRvAQCxjVETmt40ug7H/api/file/ai.yaml"
+    path: ./ruleset/ai.yaml
+    interval: 86400
+  UK-wifi-call:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://github.com/HTT0715/Mihomo-Rules/blob/a8051677020f3724af15768aff15ecd1071b9e86/wificalling.yaml"
+    path: ./ruleset/wificalling.yaml
+    interval: 86400  
+  daili:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/raw.githubusercontent.com/lingluoliuxing/guize/refs/heads/main/daili.list"
+    path: ./ruleset/daili.list
+    interval: 86400
+  zhilian:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/lingluoliuxing/guize/refs/heads/main/zhilian.list"
+    path: ./ruleset/zhilian.list
+    interval: 86400
+  Reddit:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Reddit/Reddit.yaml"
+    path: ./ruleset/Reddit.yaml
+    interval: 86400
+  Facebook:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Facebook/Facebook.yaml"
+    path: ./ruleset/Facebook.yaml
+    interval: 86400
+  Pixiv:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Pixiv/Pixiv.yaml"
+    path: ./ruleset/Pixiv.yaml
+    interval: 86400
+  Yandex:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Yandex/Yandex.yaml"
+    path: ./ruleset/Yandex.yaml
+    interval: 86400
+  Nvidia:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.05160715.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Nvidia/Nvidia.yaml"
+    path: ./ruleset/Nvidia.yaml
+    interval: 86400
