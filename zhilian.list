@@ -13,8 +13,3 @@ payload:
   - DOMAIN-SUFFIX,snssdk.com
   - DOMAIN-SUFFIX,ttnet.cn
   - DOMAIN-SUFFIX,api.fanqienovel.com
-# Epic 下载域名关键词
-  - DOMAIN-KEYWORD,epicgames-download
-  - DOMAIN-SUFFIX,epicgamescdn.com
-  - DOMAIN-SUFFIX,akamaized.net
-  - DOMAIN-SUFFIX,com.edgesuite.net
