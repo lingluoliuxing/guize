@@ -6,6 +6,7 @@ payload:
   - DOMAIN-SUFFIX,international-gfe.download.nvidia.com
   - DOMAIN-SUFFIX,agedm.com
   - DOMAIN-SUFFIX,agedm.io
+  - DOMAIN-SUFFIX,fastly.jsdelivr.net
 # 番茄 / 字节系 IPv6 & IPv4 直连
   - DOMAIN-SUFFIX,bytedance.com
   - DOMAIN-SUFFIX,toutiao.com
