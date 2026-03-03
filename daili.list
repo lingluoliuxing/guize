@@ -63,7 +63,7 @@ payload:
   - DOMAIN-SUFFIX,hostingem.ru
   - DOMAIN-SUFFIX,2dfan.com
   - DOMAIN-SUFFIX,ghfast.top
-  - DOMAIN-SUFFIX,login.tailscale.com
+  - DOMAIN-SUFFIX,tailscale.com
 #漫画
   - DOMAIN-SUFFIX,mangabz.com
   - DOMAIN-SUFFIX,wnacg.com
@@ -96,6 +96,7 @@ payload:
   - DOMAIN-SUFFIX,aws-na.intlgame.com
   - DOMAIN-SUFFIX,files.nexus-cdn.com
   - DOMAIN-SUFFIX,oplata.info
+
 
 
 
