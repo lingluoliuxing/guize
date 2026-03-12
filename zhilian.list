@@ -7,6 +7,7 @@ payload:
   - DOMAIN-SUFFIX,agedm.com
   - DOMAIN-SUFFIX,agedm.io
   - DOMAIN-SUFFIX,fastly.jsdelivr.net
+  - DOMAIN-SUFFIX,software.download.prss.microsoft.com
 # 番茄 / 字节系 IPv6 & IPv4 直连
   - DOMAIN-SUFFIX,bytedance.com
   - DOMAIN-SUFFIX,toutiao.com
