@@ -96,6 +96,8 @@ payload:
   - DOMAIN-SUFFIX,aws-na.intlgame.com
   - DOMAIN-SUFFIX,files.nexus-cdn.com
   - DOMAIN-SUFFIX,oplata.info
+#视频
+  - DOMAIN-SUFFIX,torlock.com
 
 
 
