@@ -64,6 +64,7 @@ payload:
   - DOMAIN-SUFFIX,2dfan.com
   - DOMAIN-SUFFIX,ghfast.top
   - DOMAIN-SUFFIX,tailscale.com
+  - DOMAIN-SUFFIX,immortalwrt.org
 #漫画
   - DOMAIN-SUFFIX,mangabz.com
   - DOMAIN-SUFFIX,wnacg.com
