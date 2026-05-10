@@ -79,6 +79,7 @@ payload:
   - DOMAIN-SUFFIX,javtiful.com
   - DOMAIN-SUFFIX,phncdn.com
   - DOMAIN-SUFFIX,1.hacg.pics
+  - DOMAIN-SUFFIX,rolemantic.com
 #社交
   - DOMAIN-SUFFIX,matrix.redditspace.com
   - DOMAIN-SUFFIX,cdn.branch.io
