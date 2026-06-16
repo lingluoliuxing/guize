@@ -8,6 +8,7 @@ payload:
   - DOMAIN-SUFFIX,collect.gpt4novel.com
   - DOMAIN-SUFFIX,rls.cheggpt.com
   - DOMAIN-SUFFIX,xiangcao.ai
+  - DOMAIN-SUFFIX,huggingface.co
 # emby
   - DOMAIN-SUFFIX,ykkplay.emby.moe
   - DOMAIN-SUFFIX,ykk.emby.moe
