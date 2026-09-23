@@ -21,6 +21,10 @@ payload:
   - DOMAIN-SUFFIX,sacdnssedge.com
   - DOMAIN-SUFFIX,assets.strpst.com
   - DOMAIN-SUFFIX,f95zone.to
+# similarweb
+  - DOMAIN-SUFFIX,similarweb.com
+  - DOMAIN-SUFFIX,serving-api.similarsites.com
+  - DOMAIN-SUFFIX,site-images.similarcdn.com
 # r34
   - DOMAIN-SUFFIX,us-cdn01-prem.boomio-cdn.com
   - DOMAIN-SUFFIX,us-cdn02-prem.boomio-cdn.com
