@@ -25,6 +25,7 @@ payload:
   - DOMAIN-SUFFIX,similarweb.com
   - DOMAIN-SUFFIX,serving-api.similarsites.com
   - DOMAIN-SUFFIX,site-images.similarcdn.com
+  - DOMAIN-SUFFIX,data-api.similarsites.com
 # r34
   - DOMAIN-SUFFIX,us-cdn01-prem.boomio-cdn.com
   - DOMAIN-SUFFIX,us-cdn02-prem.boomio-cdn.com
