@@ -90,6 +90,22 @@ payload:
   - DOMAIN-SUFFIX,i.pximg.net
   - DOMAIN-SUFFIX,sukebei.nyaa.si
   - DOMAIN-SUFFIX,nyaa.si
+  - DOMAIN-SUFFIX,jav.place
+  - DOMAIN-SUFFIX,dmn12.vip
+  - DOMAIN-SUFFIX,sehuatang.org
+  - DOMAIN-SUFFIX,jable.tv
+  - DOMAIN-SUFFIX,javdb.com
+  - DOMAIN-SUFFIX,javbus.com
+  - DOMAIN-SUFFIX,aiosearch.com
+  - DOMAIN-SUFFIX,u9a9.com
+  - DOMAIN-SUFFIX,cilisousuo.cc
+  - DOMAIN-SUFFIX,avmoo.shop
+  - DOMAIN-SUFFIX,btsow.live
+  - DOMAIN-SUFFIX,javlist.me
+  - DOMAIN-SUFFIX,javbooks.com
+  - DOMAIN-SUFFIX,freejavbt.com
+  - DOMAIN-SUFFIX,u3c3.com
+  - DOMAIN-SUFFIX,xxxclub.to
 #社交
   - DOMAIN-SUFFIX,matrix.redditspace.com
   - DOMAIN-SUFFIX,cdn.branch.io
